@@ -16,3 +16,30 @@ a[data-fancybox="single"], a[data-fancybox="gallery"] {
     display: flex; 
     border-bottom: none !important;
 }
+/* Ensure the carousel slide can be a positioning context */
+.f-carousel__slide {
+  position: relative;
+}
+
+/* Style for the "+N" badge */
+.gallery-more-badge {
+  position: absolute;
+  bottom: 8px; /* Adjust vertical position */
+  right: 8px;  /* Adjust horizontal position */
+  background-color: rgba(0, 0, 0, 0.75); /* Dark, semi-transparent background */
+  color: white;
+  padding: 4px 10px;
+  border-radius: 10px; /* Rounded corners */
+  font-size: 13px;
+  font-weight: bold;
+  pointer-events: none; /* Crucial: allows clicks to pass through to the image */
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.gallery-more-badge .fas {
+  margin-right: 4px;
+  font-size: 11px;
+}
